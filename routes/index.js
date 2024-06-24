@@ -1,9 +1,9 @@
 const express = require("express");
 const router = express.Router();
-const { Unicorn } = require("../models");
+const { Dog } = require("../models");
 
-router.get("/unicorns/:unicornid", (req, res) => {
-  Unicorn.findById(req.params.unicornid)
+router.get("/dogs/:dogid", (req, res) => {
+  Dog.findById(req.params.dogid)
     .then((result) => {
       res.status(200).send(result);
     })
@@ -12,8 +12,8 @@ router.get("/unicorns/:unicornid", (req, res) => {
     });
 });
 
-router.get("/unicorns", (req, res) => {
-  Unicorn.find()
+router.get("/dogs", (req, res) => {
+  Dog.find()
     .then((result) => {
       res.status(200).send(result);
     })
@@ -22,10 +22,9 @@ router.get("/unicorns", (req, res) => {
     });
 });
 
-router.post("/unicorns", (req, res) => {
-  const newUnicorn = new Unicorn(req.body);
-  console.log(req.body);
-  newUnicorn
+router.post("/dogs", (req, res) => {
+  const newDog = new Dog(req.body);
+  newDog
     .save()
     .then((result) => {
       res.status(201).send(result);
@@ -35,11 +34,11 @@ router.post("/unicorns", (req, res) => {
     });
 });
 
-router.put("/unicorns/:unicornid", (req, res) => {
-  Unicorn.findById(req.params.unicornid)
-    .then((dbunicorn) => {
-      const newUnicorndata = Object.assign(dbunicorn, req.body);
-      return newUnicorndata.save();
+router.put("/dogs/:dogid", (req, res) => {
+  Dog.findById(req.params.dogid)
+    .then((dbdogid) => {
+      const newDogData = Object.assign(dbdogid, req.body);
+      return newDogData.save();
     })
     .then((result) => {
       res.status(200).send(result);
@@ -49,13 +48,13 @@ router.put("/unicorns/:unicornid", (req, res) => {
     });
 });
 
-router.delete("/unicorns/:unicornid", (req, res) => {
-  Unicorn.findByIdAndDelete(req.params.unicornid)
+router.delete("/dogs/:dogid", (req, res) => {
+  Dog.findByIdAndDelete(req.params.dogid)
     .then((result) => {
-      res.status(200).send({ message: "Unicornio eliminado" });
+      res.status(200).send({ message: "Dog eliminado" });
     })
     .catch((err) => {
-      res.status(404).send({ message: "Unicornio no encontrado" });
+      res.status(404).send({ message: "Dog no encontrado" });
     });
 });
 

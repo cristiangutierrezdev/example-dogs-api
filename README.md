@@ -1,92 +1,105 @@
-# 🦄🦄🦄 Bienvenido a la  API de Unicornios 🦄🦄🦄
+# 🐶🐶🐶 Bienvenido a la  API de Perros 🐶🐶🐶
 
-Esta API ha sido creada con fines educativos y experimentales. Puedes utilizar la API para hacer peticiones de tipo **GET**, **POST**, **PUT** y **DELETE**, lo que te permitirá practicar un CRUD desde el front end. Esta basada en unicornios porque así lo quise hacer XD más abajo podrás encontrar la documentación para utilizarla correctamente.
+Esta API ha sido creada con fines educativos y experimentales. Puedes utilizar la API para hacer peticiones de tipo **GET**, **POST**, **PUT** y **DELETE**, lo que te permitirá practicar un CRUD desde el front end. Esta basada en perros porque así lo quise hacer XD más abajo podrás encontrar la documentación para utilizarla correctamente.
 
 # Requisitos ⚙️
 
 Esta api no exige ningún tipo de autenticación por lo tanto lo único necesario a tener en cuenta es la siguiente url base.
 
 ###### URL BASE
-`https://experimental-unicorns-experimental-org.koyeb.app/api/v1`
+`https://experimental-dogs-experimental-org.koyeb.app/api/v1`
 
 
 ## Peticiones 📖
 
 
-### Crear un unicornio 💾 🦄
+### Crear un perro 💾 🐶
 
 ##### Metodo 
 `POST`
 ##### path 
 `/unicorns`
 
-##### Datos a enviar para crear un unicornio
+##### Datos a enviar para crear un perro
 |    llave       |Tipo de valor                  |¿Es obligatorio?             |
 |----------------|-------------------------------|-----------------------------|
 |name            |`string`                       |SI                           |
-|power           |`string`                       |SI                           |
+|breed           |`string`                       |SI                           |
 |image           |`string`                       |SI                           |
+|color           |`string`                       |NO                           |
 |age             |`number`                       |NO                           |
+|favoriteToy     |`string`                       |NO                           |
+|personality     |`string`                       |NO                           |
+|bio             |`string`                       |NO                           |
 
 ##### Ejemplo de body 
 ```
 {
-  "name": "Sky",
-  "power": "Encatamineto",
-  "image": "https://img.freepik.com/vector-gratis/lindo-unicornio-bebiendo-te-leche-boba-ilustracion-icono-vector-dibujos-animados-arco-iris-icono-bebida-animal_138676-7412.jpg",
-  "age": 7
-}
+    "name": "Pepe",
+    "breed": "Fox Terrier",
+    "image": "https://images.dog.ceo/breeds/terrier-fox/n02095314_3299.jp",
+    "color": "Café y Negro",
+    "age": 3,
+    "favoriteToy": "Peluche",
+    "personality": "Juguetón",
+    "bio": "A Pepe le gusta jugar mucho con su peluche",
+  },
 ```
 
 ##### Respuesta
-La respuesta de la api sera el objeto del unicornio creado en la base de datos.
+La respuesta de la api será el objeto del perro creado en la base de datos.
 ##
-### Obtener todos los unicornios 🦄🦄🦄
+### Obtener todos los perros 🐶🐶🐶
 
 ##### Metodo 
 `GET`
 ##### path 
 `/unicorns`
 ##### Respuesta
-La respuesta de la api sera un arreglo de objetos de los unicornios.
+La respuesta de la api sera un arreglo de objetos de los perros.
 ##
-### Obtener un unicornio por su ID 🦄
+### Obtener un perro por su ID 🐶
 
 ##### Metodo 
 `GET`
 ##### path 
-`/unicorns/:unicornid`
+`/unicorns/:dogid`
 
-> **Nota:** Recuerda que debes reemplazar `:unicornid` por el ID del unicornio que quieres obtener.
+> **Nota:** Recuerda que debes reemplazar `:dogid` por el ID del perro que quieres obtener.
 ##### Respuesta
-La respuesta de la api sera el objeto del unicornio obtenido de la base de datos.
+La respuesta de la api sera el objeto del perro obtenido de la base de datos.
 ##
-### Modificar un unicornio 🔨🦄
+### Modificar un perro 🔨🐶
 
 ##### Metodo 
 `PUT`
 ##### path 
-`/unicorns/:unicornid`
+`/unicorns/:dogid`
 
-> **Nota:** Recuerda que debes reemplazar `:unicornid` por el ID del unicornio que quieres obtener.
-##### Datos que puedes modificar del unicornio
+> **Nota:** Recuerda que debes reemplazar `:dogid` por el ID del perro que quieres obtener.
+##### Datos que puedes modificar del perro
 |    llave       |Tipo de valor                  |¿Es obligatorio?             |
 |----------------|-------------------------------|-----------------------------|
 |name            |`string`                       |NO                           |
-|power           |`string`                       |NO                           |
+|breed           |`string`                       |NO                           |
 |image           |`string`                       |NO                           |
+|color           |`string`                       |NO                           |
 |age             |`number`                       |NO                           |
+|favoriteToy     |`string`                       |NO                           |
+|personality     |`string`                       |NO                           |
+|bio             |`string`                       |NO                           |
+
 ##### Respuesta
-La respuesta de la api sera el objeto del unicornio modificado de la base de datos.
+La respuesta de la api sera el objeto del perro modificado de la base de datos.
 ##
-### Eliminar un unicornio 💀🦄
+### Eliminar un perro 💀🐶
 
 ##### Metodo 
 `DELETE`
 ##### path 
-`/unicorns/:unicornid`
+`/unicorns/:dogid`
 
-> **Nota:** Recuerda que debes reemplazar `:unicornid` por el ID del unicornio que quieres obtener.
+> **Nota:** Recuerda que debes reemplazar `:dogid` por el ID del perro que quieres obtener.
 ##### Respuesta
 La respuesta de la api sera el siguiente mensaje:
-``Unicornio eliminado``
+``Perro eliminado``

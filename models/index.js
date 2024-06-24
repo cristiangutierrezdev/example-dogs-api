@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
-const Unicorn = require("./unicorn");
+const Dog = require("./dog");
 const DB_URL =
-  "mongodb+srv://experimental-user:Root1234@experimental.eejditu.mongodb.net/experimental-collections?retryWrites=true&w=majority";
+  "mongodb+srv://experimental-user:Root1234@experimental.eejditu.mongodb.net/dogs-collections?retryWrites=true&w=majority";
 
 mongoose.set("strictQuery", false);
 mongoose.connect(DB_URL, (err) => {
@@ -13,5 +13,5 @@ mongoose.connect(DB_URL, (err) => {
 });
 
 module.exports = {
-  Unicorn,
+  Dog,
 };
