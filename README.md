@@ -18,7 +18,7 @@ Esta api no exige ningún tipo de autenticación por lo tanto lo único necesari
 ##### Metodo 
 `POST`
 ##### path 
-`/unicorns`
+`/dogs`
 
 ##### Datos a enviar para crear un perro
 |    llave       |Tipo de valor                  |¿Es obligatorio?             |
@@ -54,7 +54,7 @@ La respuesta de la api será el objeto del perro creado en la base de datos.
 ##### Metodo 
 `GET`
 ##### path 
-`/unicorns`
+`/dogs`
 ##### Respuesta
 La respuesta de la api sera un arreglo de objetos de los perros.
 ##
@@ -63,7 +63,7 @@ La respuesta de la api sera un arreglo de objetos de los perros.
 ##### Metodo 
 `GET`
 ##### path 
-`/unicorns/:dogid`
+`/dogs/:dogid`
 
 > **Nota:** Recuerda que debes reemplazar `:dogid` por el ID del perro que quieres obtener.
 ##### Respuesta
@@ -74,7 +74,7 @@ La respuesta de la api sera el objeto del perro obtenido de la base de datos.
 ##### Metodo 
 `PUT`
 ##### path 
-`/unicorns/:dogid`
+`/dogs/:dogid`
 
 > **Nota:** Recuerda que debes reemplazar `:dogid` por el ID del perro que quieres obtener.
 ##### Datos que puedes modificar del perro
@@ -97,7 +97,7 @@ La respuesta de la api sera el objeto del perro modificado de la base de datos.
 ##### Metodo 
 `DELETE`
 ##### path 
-`/unicorns/:dogid`
+`/dogs/:dogid`
 
 > **Nota:** Recuerda que debes reemplazar `:dogid` por el ID del perro que quieres obtener.
 ##### Respuesta
