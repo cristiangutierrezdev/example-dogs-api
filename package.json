@@ -10,8 +10,8 @@
   "version": "1.0.0",
   "main": "app.js",
   "scripts": {
-    "dev": "npx nodemon app.js",
-    "start": "node app.js",
+    "dev": "npx nodemon functions/index.js",
+    "start": "node functions/index.js",
     "build": "netlify deploy --prod"
   },
   "keywords": [],
