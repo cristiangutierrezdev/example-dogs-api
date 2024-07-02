@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 const PORT = process.env.PORT || 4000;
-const router = require("../routes");
+const router = require("../../routes");
 const cors = require("cors");
 const serverless = require('serverless-http')
 
