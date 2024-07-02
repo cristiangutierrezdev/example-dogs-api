@@ -7,7 +7,7 @@ Esta API ha sido creada con fines educativos y experimentales. Puedes utilizar l
 Esta api no exige ningún tipo de autenticación por lo tanto lo único necesario a tener en cuenta es la siguiente url base.
 
 ###### URL BASE
-`https://experimental-dogs-experimental-org.koyeb.app/api/v1`
+`https://sample-dogs-api.netlify.app/api/v1/`
 
 
 ## Peticiones 📖
